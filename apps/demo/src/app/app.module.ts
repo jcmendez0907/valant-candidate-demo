@@ -6,14 +6,17 @@ import { LoggingService } from './logging/logging.service';
 import { StuffService } from './stuff/stuff.service';
 import { environment } from '../environments/environment';
 import { ValantDemoApiClient } from './api-client/api-client';
+import { MazeComponent } from './components/maze/maze.component';
+import { UploadFileComponent } from './shared/upload-file/upload-file.component';
+import { FormsModule } from '@angular/forms';
 
 export function getBaseUrl(): string {
   return environment.baseUrl;
 }
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule],
+  declarations: [AppComponent, MazeComponent, UploadFileComponent],
+  imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [
     LoggingService,
     StuffService,
