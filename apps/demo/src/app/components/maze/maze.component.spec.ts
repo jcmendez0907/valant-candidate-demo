@@ -14,16 +14,6 @@ describe('MazeComponent', () => {
       providers: [MazeService, ValantDemoApiClient.Client]
     })
     .compileComponents();
-    // const createElement = document.createElement.bind(document);
-    // document.createElement = (tagName) => {
-    //     if (tagName === 'canvas') {
-    //         return {
-    //             getContext: () => ({}),
-    //             measureText: () => ({})
-    //         };
-    //     }
-    //     return createElement(tagName);
-    // };
   });
 
   beforeEach(() => {
