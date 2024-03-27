@@ -1,17 +1,18 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { StuffService } from './stuff.service';
+import { MazeService } from './maze.service';
 import { ValantDemoApiClient } from '../api-client/api-client';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-describe('StuffService', () => {
-  let service: StuffService;
+describe('MazeService', () => {
+  let service: MazeService;
+
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [ ValantDemoApiClient.Client]
+      providers: [MazeService, ValantDemoApiClient.Client]
     });
-    service = TestBed.inject(StuffService);
+    service = TestBed.inject(MazeService);
   });
 
   it('should be created', () => {
